@@ -4,6 +4,10 @@
 
 <div id="abstracts">
   <% @abstracts.each do |abstract| %>
+    <% if !abstract.ancestry.blank? %>
+    <% next %>
+  <% end %>
+
     <%= render abstract %>
     <p>
       <%= link_to "Show this abstract", abstract %>

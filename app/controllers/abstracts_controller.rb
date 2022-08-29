@@ -65,6 +65,6 @@ class AbstractsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def abstract_params
-      params.require(:abstract).permit(:topic_name, :description)
+      params.require(:abstract).permit(:topic_name, :description, :ancestry)
     end
 end
